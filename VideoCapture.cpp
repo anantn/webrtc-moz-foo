@@ -221,7 +221,7 @@ VideoSourceGIPS::FrameSizeChange(
 
 int
 VideoSourceGIPS::DeliverFrame(unsigned char* buffer, int bufferSize,
-                              unsigned int time_stamp)
+                              uint32_t time_stamp, int64_t render_time)
 {
     fwrite("FRAME\n", 6, 1, tmp);
     fwrite(buffer, bufferSize, 1, tmp);

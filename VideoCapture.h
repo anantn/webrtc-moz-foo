@@ -41,7 +41,7 @@ protected:
         unsigned int numberOfStreams
     );
     int DeliverFrame(unsigned char* buffer, int bufferSize,
-                     unsigned int time_stamp);
+                     uint32_t time_stamp, int64_t render_time);
 };
 
 #endif // VideoCaptureGIPS_H
